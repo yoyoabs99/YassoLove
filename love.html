@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happy Valentine's Day!</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 0;
+            color: white;
+            text-shadow: 2px 2px 5px red;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        p {
+            font-size: 30px;
+            color: red;
+            text-shadow: 2px 2px 5px white;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out ;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px gray;
+            margin-bottom: 50px;
+            animation: rotate 5s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://source.unsplash.com/400x400/?heart" alt="heart">
+    <h1>Happy Valentine's Day!</h1>
+    <p>My Yasso ❤️,</p>
+    <p class="animated">I just want to let you know how much I love you and how grateful I am to have you in my life.
+        You make every day brighter and more beautiful. Thank you for being my partner, my friend, and my soulmate.</p>
+    <p class="animated">
+        Every moment I spend with you is a moment I cherish, and I want to spend the rest of my life making you happy and
+        building a beautiful future together. I promise to always support you, respect you, and love you with all my heart.
+    </p>
+    <p class="animated">I can't wait to spend many more happy moments
+        with you.</p>
+    <p class="animated">With all my love,</p>
+    <p class="animated">Joe :)</p>
+
+    <script>
+        const animatedElements = document.querySelectorAll('.animated');
+        let delay = 0;
+        animatedElements.forEach(element => {
+            element.style.animationDelay = delay + 's';
+            delay += 0.5;
+        });
+    </script>
+</body>
+
+</html>
